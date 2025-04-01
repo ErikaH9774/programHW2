@@ -1,20 +1,23 @@
-// programHW2.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// programHW2.cpp : This program will display the ocean level rising that occurs over a yearly rate of 1.5 mm
 //
 
 #include <iostream>
-
+// function
 int main()
-{
-    std::cout << "Hello World!\n";
+{   //including double that will show the answer in decimal format and assigning variables. 
+    double risingRate = 1.5;
+    double Initialsealevel = 0.0;
+    int years = 0;
+
+    //including std::cout will show the user of the description to enter the number of years to find the ocean rising 
+    std::cout << "Enter the number of years to find the ocean rising.";
+   // std::cin is the input of the users answer
+    std::cin >> years;
+    //including the equation that will solve the future sea level rising 
+    double futuresealevel = Initialsealevel + (1.5 * years);
+    //displaying the description of level rising at year X in mm
+    std::cout << "Assuming the ocean's level rising rate, the sea level after " << years << " years is:" << futuresealevel << "mm.";
+    //code ends
+    return 0; 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
